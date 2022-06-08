@@ -1,0 +1,12 @@
+﻿<div class="mobileNavMenuContainer">
+    <button class="mobileNavButton" @onclick='()=>NavigateToPageMethod("")'>Home</button>
+    <button class="mobileNavButton" @onclick='()=>NavigateToPageMethod("Projects")'>Projects</button>
+    <button class="mobileNavButton" @onclick='()=>NavigateToPageMethod("AboutMe")'>About Me</button>
+    <button class="mobileNavButton" @onclick='()=>NavigateToPageMethod("Contact")'>Contact</button>
+</div>
+
+@code {
+    [Parameter]
+    public Action<string> NavigateToPageMethod { get;set; }
+
+}
