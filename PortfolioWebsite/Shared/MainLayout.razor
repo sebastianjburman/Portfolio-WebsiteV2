@@ -18,10 +18,10 @@
             <svg class="navMenuMobileSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35px" height="35px"><path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z" /></svg>
         }
     </div>
-    <button class="navButton" @onclick='()=>NavigateToPageComponent("")'>Home</button>
-    <button class="navButton" @onclick='()=>NavigateToPageComponent("Projects")'>Projects</button>
-    <button class="navButton" @onclick='()=>NavigateToPageComponent("AboutMe")'>About Me</button>
-    <button class="navButton" @onclick='()=>NavigateToPageComponent("Contact")'>Contact</button>
+    <button class="@highlightPageButton("")" @onclick='()=>NavigateToPageComponent("")'>Home</button>
+    <button class="@highlightPageButton("Projects")" @onclick='()=>NavigateToPageComponent("Projects")'>Projects</button>
+    <button class="@highlightPageButton("AboutMe")" @onclick='()=>NavigateToPageComponent("AboutMe")'>About Me</button>
+    <button class="@highlightPageButton("Contact")" @onclick='()=>NavigateToPageComponent("Contact")'>Contact</button>
 </div>
 <div class="pagesContainer">
     @Body
@@ -33,11 +33,28 @@
     private void NavigateToPageComponent(string pageName)
     {
         NavigationManager.NavigateTo(pageName);
+
+        if (mobileNavMenu)
+        {
+            mobileNavMenu = false;
+        }
     }
 
     private void showHideNavMenu()
     {
         mobileNavMenu = !mobileNavMenu;
+    }
+
+    private string highlightPageButton(string pageName)
+    {
+        if(NavigationManager.ToBaseRelativePath(NavigationManager.Uri) == pageName)
+        {
+            return "highlightedNavButton";
+        }
+        else
+        {
+            return "navButton";
+        }
     }
 }
 
