@@ -1,4 +1,6 @@
-﻿@page "/"
+﻿@using PortfolioWebsite.Component
+@using Models
+@page "/"
 <PageTitle>Home</PageTitle>
 <div class="homeContainer">
     <div class="introContainer">
@@ -8,8 +10,19 @@
             <p>I am passionate about coding and solving problems. I am passionate about coding and solving problems.</p>
             <button>Resumé</button>
         </div>
-        <img src="Images/sebastian.png"/>
+        <img src="Images/sebastian.png" />
+    </div>
+    <h1 class="allProjectsHeader">All Projects</h1>
+    <div class="recentProjectsContainer">
+        @for (int i = 0; i < projects.allProjects.Count; i++)
+        {
+            <PortfolioProject Name = "@projects.allProjects[i].Name"></PortfolioProject>
+        }
     </div>
 </div>
+
+@code {
+    AllProjects projects = new AllProjects();
+}
 
 
