@@ -1,6 +1,62 @@
-﻿@page "/Contact"
-<h3>Contact</h3>
+﻿@using PortfolioWebsite.Models
+@page "/Contact"
+@inject IJSRuntime JsRuntime
+
+<div class="contactPageContainer">
+    <h2>Get in Touch</h2>
+    <div class="emailLinkContainer">
+
+        <img class="emailIconContainer" src="/Svgs/email.svg" />
+        <a href="mailto: sebastianjburman@gmail.com">sebastianjburman@gmail.com</a>
+        <p>Email Me</p>
+    </div>
+    <h2>Contact Form</h2>
+    <div class="contactFormContainer">
+        <div class="nameEmailInputContainer">
+            <input placeholder="Name*" type="text" @bind="Name" />
+            <input placeholder="Email*" type="text" @bind="Email" />
+        </div>
+        <input class="subjectInput" placeholder="Subject*" type="text" @bind="Subject"/>
+        <textarea class="messageInput" placeholder="Message*" type="text" @bind="Message" />
+        <button @onclick="SendEmail">Send Email</button>
+
+    </div>
+
+</div>
 
 @code {
+    private string? Name { get; set; }
+    private string? Email { get; set; }
+    private string? Subject { get; set; }
+    private string? Message { get; set; }
+
+
+    public async void SendEmail()
+    {
+        if (Name == null || Email == null || Subject == null || Message == null)
+        {
+            await JsRuntime.InvokeVoidAsync("alert", "Please Fill Out Entire Form");
+            return;
+        }
+        EmailSender emailSender = new EmailSender();
+        bool response = await emailSender.SendEmail(Name, Email, Subject, Message);
+
+        if (response)
+        {
+            await JsRuntime.InvokeVoidAsync("alert", "Your Email Send Succesfully");
+            Name  = "";
+            Email = "";
+            Subject = "";
+            Message = "";
+            await Task.Delay(1); //Work around for clearing values after async
+            StateHasChanged();
+        }
+        else
+        {
+            await JsRuntime.InvokeVoidAsync("alert", "Error Sending Email.");
+        }
+
+
+    }
 
 }

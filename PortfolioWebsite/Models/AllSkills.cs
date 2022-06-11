@@ -7,6 +7,10 @@
         public AllSkills()
         {
             allSkills = new List<Skill>();
+            allSkills.Add(new Skill("Devops", "/Svgs/SkillSvgs/devops.svg"));
+            allSkills.Add(new Skill("Agile", "/Images/SkillImages/agile.png"));
+            allSkills.Add(new Skill("Windows","/Svgs/SkillSvgs/windows.svg"));
+            allSkills.Add(new Skill("C#","/Svgs/SkillSvgs/csharp.svg"));
             allSkills.Add(new Skill("Html", "/Svgs/SkillSvgs/html.svg"));
             allSkills.Add(new Skill("CSS", "/Svgs/SkillSvgs/css.svg"));
             allSkills.Add(new Skill("Javascript", "/Svgs/SkillSvgs/javascript.svg"));
