@@ -1,13 +1,13 @@
-.topNavBar{
-    width:100%;
-    height:65px;
-    background-color:white;
-    display:flex;
-    align-items:center;
-    justify-content:right;
+.topNavBar {
+    width: 100%;
+    height: 65px;
+    background-color: var(--nav-color);
+    display: flex;
+    align-items: center;
+    justify-content: right;
 }
 .logoImage{
-    height:90%;
+    height:100%;
     margin-right:auto;
     margin-left:10px;
 }
@@ -20,23 +20,23 @@
     margin-right: 5px;
     border-radius: 10px;
     font-size: 1rem;
-    color: black;
+    color: var(--txt1-color); 
     font-weight:bold;
 }
     .navButton:hover {
-        background-color: lightskyblue;
-        color: black;
+        background-color: var(--btn1-color);
+        color: var(--txt1-color);
     }
 .highlightedNavButton {
     height: 60%;
     width: 110px;
-    background-color: lightskyblue;
+    background-color: var(--btn1-color);
     border: none;
     margin-left: 5px;
     margin-right: 5px;
     border-radius: 10px;
     font-size: 1rem;
-    color: black;
+    color: var(--txt1-color);
     font-weight: bold;
 }
 
@@ -50,17 +50,26 @@
     justify-content:center;
     z-index:2;
 }
-.navMenuMobileContainer:hover{
-    background-color:lightskyblue;
+    .navMenuMobileContainer:hover {
+        background-color: var(--bg-color);
+    }
+.navMenuMobileContainerOpen {
+    display: none;
+    height: 46px;
+    width: 46px;
+    margin-right: 15px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    background-color: var(--bg-color);
 }
 
-.navMenuMobileSvg{
-    fill:black;
-    
+.navMenuMobileSvg {
+    fill: var(--btn1highlight-color);
 }
 .pagesContainer {
     width: 100%;
-    height: calc(100% - 65px);
 }
 
 /*Hides nav buttons when in mobile and shows mobile nav menu*/
@@ -74,5 +83,8 @@
 
     .navMenuMobileContainer {
         display: flex;
+    }
+    .navMenuMobileContainerOpen{
+        display:flex;
     }
 }

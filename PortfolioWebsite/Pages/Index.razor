@@ -12,11 +12,12 @@
         </div>
         <img src="Images/sebastian.png" />
     </div>
-    <h1 class="allProjectsHeader">All Projects</h1>
+    <h1 class="recentProjectsHeader">Recent Projects</h1>
     <div class="recentProjectsContainer">
         @for (int i = 0; i < projects.allProjects.Count; i++)
         {
-            <PortfolioProject Name = "@projects.allProjects[i].Name"></PortfolioProject>
+            Project currentProject = projects.allProjects[i];
+            <PortfolioProject Name="@currentProject.Name" ImagePath = "@currentProject.ImagePath" Description = "@currentProject.Description" LinkToProject = "@currentProject.LinkToProject" RepoLink = "@currentProject.RepoLink"></PortfolioProject>
         }
     </div>
 </div>

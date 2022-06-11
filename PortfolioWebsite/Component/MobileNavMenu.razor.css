@@ -3,7 +3,6 @@
     height: 300px;
     width: 100%;
     top: 0px;
-    background-color: green;
     z-index: 1;
     /* Bring drop down menu in from top of screen*/
     animation-name: dropDown;
@@ -24,9 +23,14 @@
         pointer-events: all;
     }
 }
-.mobileNavButton{
-    width:100%;
-    height:25%;
-    background-color:black;
-    color:white;
+.mobileNavButton {
+    width: 100%;
+    height: 25%;
+    background-color: var(--nav-color);
+    color: white;
+    font-size:1.3rem;
+    border:0px;
+}
+.mobileNavButton:hover{
+    background-color: var(--btn1-color);
 }

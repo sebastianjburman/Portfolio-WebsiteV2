@@ -1,7 +1,6 @@
 ﻿.homeContainer{
     width:100%;
     height:100%;
-    justify-content:center;
 }
 
 .introContainer{
@@ -11,30 +10,33 @@
     justify-content:center;
     align-items:center;
 }
-.introTextContainer{
-    width:400px;
-    height:250px;
-    margin-right:20px;
-    display:flex;
-    justify-content:center;
-    flex-direction:column;
+.introTextContainer {
+    width: 400px;
+    height: 250px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .introContainer h1 {
     margin: 0px;
     font-size: 40px;
     font-family: sans-serif;
+    color: var(--txt1-color);
 }
 .introContainer h4 {
     margin: 0px;
-    margin-top:12px;
+    margin-top: 12px;
     font-size: 15px;
     font-family: sans-serif;
+    color: var(--txt1-color);
 }
 .introContainer p {
-    margin:0px;
+    margin: 0px;
     margin-top: 12px;
     font-size: 20px;
-    font-family:sans-serif;
+    font-family: sans-serif;
+    color: var(--txt1-color);
 }
 .introTextContainer button {
     width: 90px;
@@ -42,12 +44,12 @@
     margin-top: 20px;
     border: none;
     border-radius: 6px;
-    background-color: lightskyblue;
-    color: black;
+    background-color: var(--btn1-color);
+    color: var(--txt1-color);
 }
 
 .introTextContainer button:hover{
-    opacity:.7;
+    background-color:var(--btn1highlight-color)
 }
 .introContainer img {
     width: 100%;
@@ -55,15 +57,15 @@
     height: 300px;
     border-radius: 50%;
     border: solid;
-    border-color: lightskyblue;
+    border-color: var(--btn1highlight-color);
     border-width: 3px;
 }
 
-.allProjectsHeader{
-    width:100%;
-    text-align:center;
-    font-family:sans-serif;
-   
+.recentProjectsHeader {
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+    color: var(--txt1-color);
 }
 .recentProjectsContainer {
     width: 90%;
@@ -78,13 +80,15 @@
 @media only screen and (max-width: 750px) {
     .introContainer{
         flex-direction:column-reverse;
-        height:550px;
+        height:600px;
         width:100%;
-        margin-top:30px;
     }
     .introTextContainer{
         width:90%;
         height:400px;
+    }
+    .introContainer img {
+        margin-top:30px;
     }
 }
 

@@ -1,16 +1,16 @@
 ﻿.portfolioProjectContainer {
-    position:relative;
+    position: relative;
     width: 300px;
     height: 400px;
     background-color: green;
     border-radius: 6px;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: lightskyblue;
+    background-color: var(--comp1-color);
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow:hidden;
+    overflow: hidden;
 }
 .portfolioProjectContainer img{
     margin-top:10px;
@@ -27,6 +27,7 @@
     justify-content:center;
     align-items:center;
     font-family:sans-serif;
+    color: var(--txt1-color); 
 }
 .portfolioProjectContainerHidden {
     display: none;
@@ -35,7 +36,7 @@
     width: 300px;
     height: 400px;
     border-radius: 6px;
-    background-color:lightskyblue;
+    background-color:var(--comp2-color);
     flex-direction:column;
     align-items:center;
     justify-content:space-evenly;
@@ -48,18 +49,31 @@
 .portfolioProjectContainerHidden h2 {
     width:90%;
     text-align:center;
-    color:black;
+    color: var(--txt1-color); 
+    font-family:sans-serif;
 }
-.portfolioProjectContainerHidden button{
-    width:110px;
-    height:50px;
-    font-size:1rem;
-    border:none;
-    border-radius:7px;
+.portfolioProjectContainerHiddenButton {
+    width: 110px;
+    height: 50px;
+    font-size: .9rem;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--btn1-color);
+    color: var(--txt1-color);
+}
+.noLivePreviewButton {
+    width: 140px;
+    height: 50px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--btn1-color);
+    color: var(--txt1-color);
+    opacity:.4;
 }
 
-.portfolioProjectContainerHidden button:hover{
-    opacity:.70;
+.portfolioProjectContainerHiddenButton:hover {
+    opacity: .70;
 }
 
 /* Bring menu in from top of card*/

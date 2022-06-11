@@ -8,10 +8,12 @@
 
   <ItemGroup>
     <None Remove="Component\PortfolioProject.razor.css" />
+    <None Remove="Component\SkillCard.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Component\PortfolioProject.razor.css" />
+    <Content Include="Component\SkillCard.razor.css" />
   </ItemGroup>
 
   <ItemGroup>

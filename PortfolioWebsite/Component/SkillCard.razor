@@ -1,0 +1,11 @@
+﻿<div class="skillCardContainer">
+    <img src=@ImagePath/>
+    <p>@Name</p>
+</div>
+
+@code {
+    [Parameter]
+    public string Name { get;set; }
+    [Parameter]
+    public string ImagePath { get; set; }
+}

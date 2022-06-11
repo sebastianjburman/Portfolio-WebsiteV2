@@ -5,19 +5,23 @@
 <div class="topNavBar">
     @if (mobileNavMenu)
     {
-        <MobileNavMenu NavigateToPageMethod = "NavigateToPageComponent"></MobileNavMenu>
+        <MobileNavMenu NavigateToPageMethod="NavigateToPageComponent"></MobileNavMenu>
     }
-    <img class="logoImage" src="Images/nameLogo.png" />
-    <div class="navMenuMobileContainer" @onclick=showHideNavMenu>
-        @if (mobileNavMenu)
-        {
+
+    <img class="logoImage" src="Svgs/logo.svg" />
+    @if (mobileNavMenu)
+    {
+        <div class="navMenuMobileContainerOpen" @onclick=showHideNavMenu>
             <svg class="navMenuMobileSvg" xmlns="http://www.w3.org/2000/svg" width="28px" height="28px" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" /></svg>
-        }
-        else
-        {
+        </div>
+    }
+    else
+    {
+        <div class="navMenuMobileContainer" @onclick=showHideNavMenu>
             <svg class="navMenuMobileSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35px" height="35px"><path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z" /></svg>
-        }
-    </div>
+        </div>
+
+    }
     <button class="@highlightPageButton("")" @onclick='()=>NavigateToPageComponent("")'>Home</button>
     <button class="@highlightPageButton("Projects")" @onclick='()=>NavigateToPageComponent("Projects")'>Projects</button>
     <button class="@highlightPageButton("AboutMe")" @onclick='()=>NavigateToPageComponent("AboutMe")'>About Me</button>
@@ -47,7 +51,7 @@
 
     private string highlightPageButton(string pageName)
     {
-        if(NavigationManager.ToBaseRelativePath(NavigationManager.Uri) == pageName)
+        if (NavigationManager.ToBaseRelativePath(NavigationManager.Uri) == pageName)
         {
             return "highlightedNavButton";
         }
