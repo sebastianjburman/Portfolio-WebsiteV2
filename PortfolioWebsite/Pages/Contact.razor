@@ -6,17 +6,15 @@
     <h2>Get in Touch</h2>
     <div class="emailLinkContainer">
 
-        <img class="emailIconContainer" src="/Svgs/email.svg" />
+        <img class="emailIconContainer" src="Svgs/email.svg" />
         <a href="mailto: sebastianjburman@gmail.com">sebastianjburman@gmail.com</a>
         <p>Email Me</p>
     </div>
     <h2>Contact Form</h2>
     <div class="contactFormContainer">
-        <div class="nameEmailInputContainer">
-            <input placeholder="Name*" type="text" @bind="Name" />
-            <input placeholder="Email*" type="text" @bind="Email" />
-        </div>
-        <input class="subjectInput" placeholder="Subject*" type="text" @bind="Subject"/>
+        <input class="normalInput" placeholder="Name*" type="text" @bind="Name" />
+        <input class="normalInput" placeholder="Email*" type="text" @bind="Email" />
+        <input class="normalInput" placeholder="Subject*" type="text" @bind="Subject"/>
         <textarea class="messageInput" placeholder="Message*" type="text" @bind="Message" />
         <button @onclick="SendEmail">Send Email</button>
 

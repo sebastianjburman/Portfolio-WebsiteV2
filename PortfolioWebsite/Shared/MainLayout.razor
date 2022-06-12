@@ -8,7 +8,7 @@
         <MobileNavMenu NavigateToPageMethod="NavigateToPageComponent"></MobileNavMenu>
     }
 
-    <img class="logoImage" src="Svgs/logo.svg" />
+    <img class="logoImage" src="Svgs/logo.svg" @onclick='()=>NavigateToPageComponent("")' />
     @if (mobileNavMenu)
     {
         <div class="navMenuMobileContainerOpen" @onclick=showHideNavMenu>

@@ -1,23 +1,22 @@
-﻿using SendGrid;
-using SendGrid.Helpers.Mail;
-using System;
+﻿using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 namespace PortfolioWebsite.Models
 {
     public class EmailSender
     {
+         HttpClient client = new HttpClient();
         public async Task<bool> SendEmail(string Name, string Email, string Subject, string Message)
         {
-            var apiKey = Environment.GetEnvironmentVariable("EmailApiKey");
-            var client = new SendGridClient(apiKey);
-            var from = new EmailAddress("sebastianburmancode@gmail.com", "Portfolio Website");
-            var subject = Subject;
-            var to = new EmailAddress("sebastianjburman@gmail.com", "Myself");
-            var plainTextContent = Message;
-            var htmlContent = $"<strong>Name: {Name}</strong><br><strong>From: {Email}</strong><br><strong> {Message}</strong>";
-            var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
-            var response = await client.SendEmailAsync(msg);
+            var request = new HttpRequestMessage(HttpMethod.Post, "https://portfoliowebsiteapisendgrid.azurewebsites.net/api/Email/send");
+            request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            request.Headers.Add("Name", Name);
+            request.Headers.Add("Email", Email);
+            request.Headers.Add("Subject", Subject);
+            request.Headers.Add("Message", Message);
+
+            var response = await client.SendAsync(request);
+
             bool successfulEmail = response.IsSuccessStatusCode;
             return successfulEmail;
         }

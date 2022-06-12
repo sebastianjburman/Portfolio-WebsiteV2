@@ -53,38 +53,27 @@
     margin-bottom:20px;
 }
 
-.nameEmailInputContainer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-.nameEmailInputContainer input{
-    width:45%;
-    height:30px;
-    margin:5px;
-    border:none;
-    border-radius:7px;
-    font-size:1rem;
-}
-.subjectInput {
-    width: 93%;
+
+.normalInput {
+    width: 85%;
     height: 30px;
-    margin-bottom: 20px;
-    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     border: none;
     border-radius: 7px;
     font-size: 1rem;
 }
 
 .messageInput {
-    width: 93%;
+    width: 85%;
     height: 60px;
     border: none;
     border-radius: 7px;
     font-size: 1rem;
     resize: none;
-    padding-left:5px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .contactFormContainer button {
