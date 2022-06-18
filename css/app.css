@@ -1,0 +1,24 @@
+﻿html {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+}
+
+html {
+    --bg-color: #151a21;
+    --nav-color: #242c37;
+    --comp1-color: #242c37;
+    --txt1-color: white;
+    --btn1-color: #5d7290;
+    --btn1highlight-color: #526580;
+    --comp2-color: #323d4d;
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin:0px;
+}
+#app {
+    width: 100%;
+    height:100%;
+}
