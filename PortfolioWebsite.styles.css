@@ -4,7 +4,7 @@
     height: 300px;
     width: 100%;
     top: 0px;
-    z-index: 1;
+    z-index: 3;
     background-color: var(--nav-color);
     /* Bring drop down menu in from top of screen*/
     animation-name: dropDown-b-0bd67gn624;
