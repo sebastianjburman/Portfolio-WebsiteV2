@@ -33,6 +33,9 @@
     background-color: var(--btn1-color);
 }
 
+.showMoreButton:hover {
+    background-color: var(--btn1highlight-color);
+}
 
 .portfolioProjectContainer img {
     margin-top: 10px;
