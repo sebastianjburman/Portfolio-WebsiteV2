@@ -72,6 +72,9 @@
     background-color: var(--btn1-color);
 }
 
+.showMoreButton:hover[b-e320weakx0] {
+    background-color: var(--btn1highlight-color);
+}
 
 .portfolioProjectContainer img[b-e320weakx0] {
     margin-top: 10px;
@@ -337,8 +340,8 @@
 .normalInput[b-cgpymjs7x5] {
     width: 85%;
     height: 30px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
     border: none;
     border-radius: 7px;
     font-size: 1rem;
@@ -353,7 +356,7 @@
     resize: none;
     padding-left: 5px;
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .contactFormContainer button[b-cgpymjs7x5] {
@@ -412,10 +415,17 @@
     font-family: sans-serif;
     color: var(--txt1-color);
 }
-.introTextContainer a[b-gxd3fy5r03] {
+
+.githubLinkedInCon[b-gxd3fy5r03]{
+    display: flex;
+    width: 250px;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.resumeButton[b-gxd3fy5r03] {
     width: 90px;
     height: 38px;
-    margin-top: 20px;
     border: none;
     border-radius: 6px;
     background-color: var(--btn1-color);
@@ -428,9 +438,31 @@
     justify-content:center;
 }
 
-.introTextContainer a:hover[b-gxd3fy5r03]{
+.resumeButton:hover[b-gxd3fy5r03]{
     background-color:var(--btn1highlight-color)
 }
+
+.githubLinkedInLinks[b-gxd3fy5r03]{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.githubIcon[b-gxd3fy5r03]{
+    fill: white;
+}
+.githubIcon:hover[b-gxd3fy5r03]{
+    fill: rgb(197, 197, 197);
+}
+.linkedInIcon[b-gxd3fy5r03]{
+    fill: white;
+}
+.linkedInIcon:hover[b-gxd3fy5r03]{
+    fill: rgb(197, 197, 197);
+}
+
 .introContainer img[b-gxd3fy5r03] {
     width: 100%;
     max-width: 300px;
@@ -447,6 +479,7 @@
     font-family: sans-serif;
     color: var(--txt1-color);
     font-size:2rem;
+    
 }
 .recentProjectsContainer[b-gxd3fy5r03] {
     width: 90%;
