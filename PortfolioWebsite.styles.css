@@ -421,6 +421,7 @@
     width: 250px;
     height: 50px;
     justify-content: space-between;
+    margin-top: 10px;
     align-items: center;
 }
 .resumeButton[b-gxd3fy5r03] {
@@ -448,7 +449,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
 }
 
 .githubIcon[b-gxd3fy5r03]{
