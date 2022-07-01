@@ -547,6 +547,7 @@
     display: flex;
     align-items: center;
     background-color: blueviolet;
+    overflow: hidden;
 }
 .logoImage[b-sx2x1yc5fr]{
     height:100%;
