@@ -538,14 +538,15 @@
     height: 65px;
     background-color: var(--nav-color);
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 .contentContainer[b-sx2x1yc5fr]{
     width: 100%;
+    max-width: 2000px;
     height: 100%;
     display: flex;
     align-items: center;
+    background-color: blueviolet;
 }
 .logoImage[b-sx2x1yc5fr]{
     height:100%;
