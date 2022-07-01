@@ -4,7 +4,6 @@
     height: 65px;
     background-color: var(--nav-color);
     display: flex;
-    align-items: center;
 }
 .contentContainer{
     width: 100%;
