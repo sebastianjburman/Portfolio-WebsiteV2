@@ -9,10 +9,10 @@
 }
 .contentContainer{
     width: 100%;
-    max-width: 2000px;
+    /*max-width: 2000px;*/
     height: 100%;
-    display: flex;
-    align-items: center;
+   /* display: flex;
+    align-items: center;*/
 }
 .logoImage{
     height:100%;
