@@ -543,10 +543,10 @@
 }
 .contentContainer[b-sx2x1yc5fr]{
     width: 100%;
-    max-width: 2000px;
+    /*max-width: 2000px;*/
     height: 100%;
-    display: flex;
-    align-items: center;
+   /* display: flex;
+    align-items: center;*/
 }
 .logoImage[b-sx2x1yc5fr]{
     height:100%;
