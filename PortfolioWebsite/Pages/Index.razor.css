@@ -95,6 +95,7 @@
     border: solid;
     border-color: var(--btn1highlight-color);
     border-width: 3px;
+    margin-left: 100px;
 }
 
 .recentProjectsHeader {
@@ -127,6 +128,6 @@
     }
     .introContainer img {
         margin-top:30px;
+        margin-left: 0px;
     }
 }
-

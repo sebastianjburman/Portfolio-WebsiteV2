@@ -3,7 +3,8 @@
 @using PortfolioWebsite.Component
 
 <div class="topNavBar">
-    @if (mobileNavMenu)
+    <div class="contentContainer">
+        @if (mobileNavMenu)
     {
         <MobileNavMenu NavigateToPageMethod="NavigateToPageComponent"></MobileNavMenu>
     }
@@ -26,6 +27,7 @@
     <button class="@highlightPageButton("Projects")" @onclick='()=>NavigateToPageComponent("Projects")'>Projects</button>
     <button class="@highlightPageButton("AboutMe")" @onclick='()=>NavigateToPageComponent("AboutMe")'>About Me</button>
     <button class="@highlightPageButton("Contact")" @onclick='()=>NavigateToPageComponent("Contact")'>Contact</button>
+    </div>
 </div>
 <div class="pagesContainer">
     @Body
