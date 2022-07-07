@@ -13,17 +13,31 @@
     </div>
     <h2>Contact Form</h2>
     <div class="contactFormContainer">
-        <input class="normalInput" placeholder="Name*" type="text" @bind="Name" />
-        <input class="normalInput" placeholder="Email*" type="text" @bind="Email" />
-        <input class="normalInput" placeholder="Subject*" type="text" @bind="Subject"/>
-        <textarea class="messageInput" placeholder="Message*" type="text" @bind="Message" />
-        <button @onclick="SendEmail">Send Email</button>
-
+        @if (loading)
+        {
+            <h3>Sending</h3>
+            <img class="loadingSvg" src="Svgs/loading.svg">  
+        }
+        else if (!loading && emailSent){
+            <h2>Email Sent</h2>
+            <img class="emailSentSvg" src="Svgs/mailsent.svg">
+            <button @onclick='()=>emailSent = false'>New Email</button>
+        }
+        else if(!loading && !emailSent)
+        {
+            <input class="normalInput" placeholder="Name*" type="text" @bind="Name" />
+            <input class="normalInput" placeholder="Email*" type="text" @bind="Email" />
+            <input class="normalInput" placeholder="Subject*" type="text" @bind="Subject"/>
+            <textarea class="messageInput" placeholder="Message*" type="text" @bind="Message" />
+            <button @onclick="SendEmail">Send Email</button>
+        }
     </div>
 
 </div>
 
 @code {
+    private bool loading = false;
+    private bool emailSent = false;
     private string? Name { get; set; }
     private string? Email { get; set; }
     private string? Subject { get; set; }
@@ -37,16 +51,18 @@
             await JsRuntime.InvokeVoidAsync("alert", "Please Fill Out Entire Form");
             return;
         }
+        loading = true;
         EmailSender emailSender = new EmailSender();
         bool response = await emailSender.SendEmail(Name, Email, Subject, Message);
 
         if (response)
         {
-            await JsRuntime.InvokeVoidAsync("alert", "Your Email Send Succesfully");
             Name  = "";
             Email = "";
             Subject = "";
             Message = "";
+            loading = false;
+            emailSent = true;
             await Task.Delay(1); //Work around for clearing values after async
             StateHasChanged();
         }
@@ -54,8 +70,6 @@
         {
             await JsRuntime.InvokeVoidAsync("alert", "Error Sending Email.");
         }
-
-
     }
 
 }
