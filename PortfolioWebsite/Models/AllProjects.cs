@@ -7,6 +7,8 @@
         public AllProjects()
         {
             allProjects = new List<Project>();
+            allProjects.Add(new Project("Full Stack Chat App", "Images/ProjectImages/fullstackchatapp.gif", "Full stack chat app created with React, .Net and MongoDB.",
+               "https://tetraroomsjburman.netlify.app", "https://github.com/sebastianjburman/Full-Stack-Chat-App"));
             allProjects.Add(new Project("Portfolio Website", "Images/ProjectImages/Portfoliowebsiteproject.png", "This portfolio website created in blazor webassembly.",
                "http://sebastianjburman.com", "https://github.com/sebastianjburman/Portfolio-WebsiteV2"));
             allProjects.Add(new Project("Flappy Bird Clone", "Images/ProjectImages/flappyBirdClone.gif", "Flappy bird clone created in java using libgdx.",
