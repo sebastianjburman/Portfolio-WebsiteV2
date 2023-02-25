@@ -84,6 +84,7 @@
     border-radius: 7px;
     background-color: var(--btn1-color);
     color: var(--txt1-color);
+    font-family: sans-serif;
 }
 .noLivePreviewButton {
     width: 140px;
