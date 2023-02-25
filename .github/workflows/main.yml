@@ -22,9 +22,11 @@ jobs:
         uses: actions/setup-dotnet@v1
       - name: Run build script
         run: dotnet publish -c Release -o release 
+        working-directory: ./PortfolioWebsite
         shell: bash
         # copy index.html to 404.html to serve the same file when a file is not found
       - name: copy index.html to 404.html
+        working-directory: ./PortfolioWebsite
         run: cp release/wwwroot/index.html release/wwwroot/404.html
         # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
       - name: Deploy to GitHub Pages
@@ -32,7 +34,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          folder: ./release/wwwroot
+          folder: ./PortfolioWebsite/release/wwwroot
 
     
     
