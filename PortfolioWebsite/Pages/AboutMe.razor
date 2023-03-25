@@ -6,17 +6,23 @@
 <div class="aboutMePageContainer">
     <h2>About Me</h2>
     <div class="aboutMeParagraphContainer">
-        <p>I'm a developer who loves solving complex issues. Currently, I am attending Indiana University Southeast and pursuing my bachelor's in computer science. I am passionate about coding and solving problems. I'm excited to work with other programmers and to learn new skills and tools!</p>
+        <p>
+            My name is Sebastian Burman, and I'm
+            currently pursuing a bachelor's degree in computer science at Indiana University Southeast. As a passionate
+            developer, I love tackling complex problems through coding. Below are some of the technologies I know and
+            have experience working with. Please feel free to browse my portfolio and check out the projects I've worked
+            on. Thank you for visiting!
+        </p>
     </div>
-    <h2>Skills</h2>`
+    <h2>Skills</h2>
     <div class="skillsContainer">
         @for (int i = 0; i < allSkills.allSkills.Count; i++)
         {
             Skill currentSkill = allSkills.allSkills[i];
-            <SkillCard Name="@currentSkill.Name" ImagePath = "@currentSkill.ImagePath"></SkillCard>
+            <SkillCard Name="@currentSkill.Name" ImagePath="@currentSkill.ImagePath"></SkillCard>
         }
     </div>
-    
+
 </div>
 
 @code {

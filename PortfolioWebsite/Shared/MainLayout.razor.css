@@ -18,6 +18,7 @@
     height:100%;
     margin-right:auto;
     margin-left:10px;
+    width: 100px;
 }
 .navButton {
     height: 60%;
@@ -74,7 +75,7 @@
 }
 
 .navMenuMobileSvg {
-    fill: var(--btn1highlight-color);
+    fill: var(--btn1-color);
 }
 .pagesContainer {
     width: 100%;
