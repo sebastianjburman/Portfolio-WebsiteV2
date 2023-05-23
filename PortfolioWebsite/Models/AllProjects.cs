@@ -7,12 +7,12 @@
         public AllProjects()
         {
             allProjects = new List<Project>();
-            allProjects.Add(new Project("Workout Planning Application", "Images/ProjectImages/comingSoon.png" ,"Angular frontend, .NET backend and MongoDB. Used JWT for authentication. Project to show of my skills.",
-                null,"https://github.com/sebastianjburman/Full-Stack-Workout-Planning-Application"));
+            allProjects.Add(new Project("Workout Planning Application", "Images/ProjectImages/workoutApplication.png" ,"Angular frontend, .NET backend and MongoDB. Used JWT for authentication. Project to show of my skills.",
+                "https://workoutplanningapplication.netlify.app/","https://github.com/sebastianjburman/Full-Stack-Workout-Planning-Application"));
             allProjects.Add(new Project("Crud Movie Rating Application", "Images/ProjectImages/crudMovieRatingImg.png", "Crud movie rating application created with Angular, ExpressJS and MongoDB.",
                null, "https://github.com/sebastianjburman/Crud-Movie-Rating-Application"));
             allProjects.Add(new Project("Full Stack Chat App", "Images/ProjectImages/fullstackchatapp.gif", "Full stack chat app created with React, .Net and MongoDB.",
-               "https://tetraroomsjburman.netlify.app", "https://github.com/sebastianjburman/Full-Stack-Chat-App"));
+               null, "https://github.com/sebastianjburman/Full-Stack-Chat-App"));
             allProjects.Add(new Project("Portfolio Website V2", "Images/ProjectImages/Portfoliowebsiteproject.png", "This portfolio website created in Blazor webassembly.",
                "http://sebastianjburman.com", "https://github.com/sebastianjburman/Portfolio-WebsiteV2"));
             allProjects.Add(new Project("Flappy Bird Clone", "Images/ProjectImages/flappyBirdClone.gif", "Flappy bird clone created in Java using libgdx.",
